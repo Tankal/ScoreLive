@@ -1,6 +1,6 @@
-# JetScore
+# Live Score
 
-JetScore is a PHP/MySQL live-score portfolio project for listing football matches, teams, leagues, match details and basic user profile flows.
+Live Score is a PHP/MySQL live-score portfolio project for listing football matches, teams, leagues, match details and basic user profile flows.
 
 ## Features
 
