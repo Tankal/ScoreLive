@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Giriş yap | JetScore</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+
+
+
+</head>
+
+<body>
+
+
+    <div class="login-wrapper">
+        <div class="container">
+            <h1>JetScore</h1>
+            <p>Anlık Skorlar, <br> Anında Heyecan!</p>
+        </div>
+        <div class="toast-container position-fixed top-0 end-0 p-3">
+            <div id="uyaritablo" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong id="uyari_baslik" class="me-auto"></strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    <span id="uyari_icerik"></span>
+                </div>
+            </div>
+        </div>
+        <div class="login">
+            <form id="giris_form" class="custom-form" method="Post" action="javascript:void(0)">
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><svg width="24" height="24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                                height="24">
+                                <path fill="#D9D9D9" d="M0 0h24v24H0z" />
+                            </mask>
+                            <g mask="url(#a)" stroke="#000" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M21 15.194c0 2.765-1.845 5.013-4.582 5.006H7.582C4.845 20.207 3 17.96 3 15.194V9.013C3 6.25 4.845 4 7.582 4h8.836C19.155 4 21 6.25 21 9.013v6.181Z" />
+                                <path
+                                    d="m17.305 9.01-4 3.251a2.069 2.069 0 0 1-2.573 0L6.7 9.01M9.963 11.642 6.695 15.19m10.61 0-3.23-3.548" />
+                            </g>
+                        </svg></span>
+                    <input type="text" class="form-control" name="eposta" id="eposta" aria-label="E-Posta"
+                        placeholder="E-Posta">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><svg width="24" height="24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                                height="24">
+                                <path fill="#D9D9D9" d="M0 0h24v24H0z" />
+                            </mask>
+                            <g mask="url(#a)" stroke="#000" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M8.962 15.205v-.064m-.259.05a.261.261 0 1 1 .523 0 .261.261 0 0 1-.523 0ZM12.407 15.205v-.064m-.259.05a.26.26 0 1 1 .521 0 .26.26 0 1 1-.521 0ZM15.849 15.205v-.064m-.26.05c0-.144.118-.261.262-.261a.26.26 0 0 1 .26.26.26.26 0 1 1-.521 0ZM16.858 9.49V7.392a4.448 4.448 0 0 0-8.897-.02V9.49" />
+                                <path
+                                    d="M9.71 21.044h5.392c1.595 0 2.393 0 3.009-.296a3.002 3.002 0 0 0 1.405-1.405c.296-.616.296-1.414.296-3.009v-2.132c0-1.595 0-2.393-.296-3.008a3 3 0 0 0-1.405-1.406c-.616-.296-1.414-.296-3.009-.296H9.71c-1.595 0-2.393 0-3.009.296a3 3 0 0 0-1.405 1.406C5 11.81 5 12.607 5 14.202v2.132c0 1.595 0 2.393.296 3.01.295.613.791 1.11 1.405 1.404.616.296 1.414.296 3.009.296Z" />
+                            </g>
+                        </svg></span>
+                    <input type="password" class="form-control password-input" name="sifre" id="sifre"
+                        aria-label="Şifre" placeholder="Şifre">
+                    <span class="input-group-text toggle-password">
+                        <svg class="show" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                                height="24">
+                                <path fill="#D9D9D9" d="M0 0h24v24H0z" />
+                            </mask>
+                            <g mask="url(#a)" stroke="#000" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M4 7c3.2 6.933 12.8 6.933 16 0M6.863 10.539l-2.86 3.929M17.145 10.539l2.858 3.929M12 12.203v3.866" />
+                            </g>
+                        </svg>
+                        <svg class="hide" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                            <mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                                height="24">
+                                <path fill="#D9D9D9" d="M0 0h24v24H0z" />
+                            </mask>
+                            <g mask="url(#a)" stroke="#000" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 13.2c3.2-6.934 12.8-6.934 16 0" />
+                                <path clip-rule="evenodd"
+                                    d="M12.003 16.93a2.315 2.315 0 0 1-2.312-2.312 2.316 2.316 0 0 1 2.312-2.313 2.316 2.316 0 0 1 2.313 2.313 2.315 2.315 0 0 1-2.313 2.313Z" />
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+
+                <div class="form-check mb-3 d-flex align-items-center">
+                    <input class="form-check-input" type="checkbox" value="" id="rememberme">
+                    <label class="form-check-label ms-2" for="rememberme">
+                        Beni Hatırla
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn submit-btn">Giriş Yap</button>
+                </div>
+            </form>
+
+            <div class="login-footer">
+                <a href="#" class="forgot-pw">Şifremi unuttum.</a>
+                <p>Hesabın yok mu? <a href="#">Kayıt Ol.</a></p>
+            </div>
+        </div>
+    </div>
+    <div id="bilgi"></div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+    $("#giris_form").submit(function() {
+        var eposta = document.getElementById("eposta").value;
+        var sifre = document.getElementById("sifre").value;
+        if (eposta != "" && sifre != "") {
+            Post_Gonder("giris_form", "&girisyap");
+
+        } else {
+             uyariGoster("Uyarı!", "Boş Alan Bırakmayınız");
+        }
+    })
+
+    $(".toggle-password").click(function() {
+
+        $(this).toggleClass("active");
+
+        var input = $('.password-input');
+
+        if (input.attr("type") == "password") {
+            input.attr("type", "text");
+        } else {
+            input.attr("type", "password");
+        }
+
+    });
+
+    function uyariGoster(baslik, icerik) {
+        let uyari_bas = document.getElementById("uyari_baslik");
+        let uyari_yazi = document.getElementById("uyari_icerik");
+
+        uyari_bas.textContent = baslik;
+        uyari_yazi.textContent = icerik;
+
+        new bootstrap.Toast(document.querySelector('#uyaritablo')).show();
+    }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maç Detay | JetScore</title>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:title" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/main.min.css">  
+  
+<link href="assets/css/bootstrap-table.min.css" rel="stylesheet">
+<link href="assets/css/bootstrap-table-fixed-columns.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="loginToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">Üye ol ya da giriş yap.</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Sohbete katılmak için <a href="#">üye ol</a> ya da <a href="#">giriş yap</a>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="toast-container position-fixed top-0 end-0 p-3">
+  <div id="goalToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">⚽ Gooooooooooolllll!!!!!</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Manchester United 1-0 öne geçti!
+    </div>
+  </div>
+</div>
+
+
+<section id="match-detail" class="basket">
+    <div class="container">
+        <div class="match-action">
+            <a href="#" class="prev">
+                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24"><path fill="#D9D9D9" d="M0 0h24v24H0z"/></mask><g mask="url(#a)" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.025h15M10.05 18.049 4 12.025 10.05 6"/></g></svg>
+            </a>
+            <div class="league-title">
+                Premier League
+            </div>
+
+            <div class="actions">
+                <button class="favourite" onclick="addFav(this)">
+                    <svg class="inactive" width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="a" maskUnits="userSpaceOnUse" x="0" y="0" width="21" height="21"><path fill="#D9D9D9" d="M.5.5h20v20H.5z"></path></mask><g mask="url(#a)"><path clip-rule="evenodd" d="m11.42 3.564 1.523 3.042c.15.3.437.506.771.554l3.407.49c.842.122 1.177 1.142.568 1.727l-2.464 2.367a1.003 1.003 0 0 0-.295.896l.582 3.341c.143.827-.737 1.458-1.49 1.067l-3.044-1.58a1.04 1.04 0 0 0-.956 0l-3.045 1.58c-.752.39-1.632-.24-1.488-1.066l.58-3.342a1.003 1.003 0 0 0-.294-.896L3.31 9.377c-.609-.585-.274-1.605.568-1.726l3.407-.49c.334-.049.623-.256.772-.555L9.58 3.564c.376-.752 1.464-.752 1.84 0Z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                    <svg class="active" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="a" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20"><path fill="#D9D9D9" d="M0 0h20v20H0z"></path></mask><g mask="url(#a)"><path fill-rule="evenodd" clip-rule="evenodd" d="m10.92 3.064 1.523 3.042c.15.3.437.506.771.554l3.407.49c.842.122 1.177 1.142.568 1.727l-2.464 2.367a1.003 1.003 0 0 0-.295.896l.582 3.341c.143.827-.737 1.458-1.49 1.067l-3.044-1.58a1.04 1.04 0 0 0-.956 0l-3.045 1.58c-.752.39-1.632-.24-1.488-1.066l.58-3.342a1.003 1.003 0 0 0-.294-.896L2.81 8.877c-.609-.585-.274-1.605.568-1.726l3.407-.49c.334-.049.623-.256.772-.555L9.08 3.064c.376-.752 1.464-.752 1.84 0Z" fill="#FFA800" stroke="#FFA800" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                </button>
+                <div class="more">
+                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24"><path fill="#D9D9D9" d="M0 0h24v24H0z"/></mask><g mask="url(#a)"><path d="M11.5 9.25a2.25 2.25 0 1 1 0-4.5 2.25 2.25 0 0 1 0 4.5Zm0 10a2.25 2.25 0 1 1 0-4.5 2.25 2.25 0 0 1 0 4.5Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="teams v2">
+            <div class="team">
+                <img src="assets/img/manu.png" alt="" width="48" height="48">
+                <p>M. United</p>
+            </div>
+            <div class="score">
+                <div class="time">18’</div>
+                <div class="number">
+                    <p>2</p>
+                    <span>:</span>
+                    <p>1</p>
+                </div>
+            </div>
+            <div class="team">
+                <img src="assets/img/liverpool.png" alt="" width="48" height="48">
+                <p>Liverpool</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="match-info">
+        <nav class="match-tab">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-detail-tab" data-bs-toggle="tab" data-bs-target="#nav-detail" type="button" role="tab" aria-controls="nav-detail" aria-selected="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path clip-rule="evenodd" d="M10.757 4.785H6.11c-.749 0-1.356-.607-1.356-1.356v-.573c0-.75.607-1.356 1.356-1.356h4.647c.75 0 1.356.607 1.356 1.356v.573c0 .75-.607 1.356-1.356 1.356Z" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.114 3.094a3.755 3.755 0 0 1 3.754 3.754v8.898a3.755 3.755 0 0 1-3.754 3.754h-7.36A3.755 3.755 0 0 1 1 15.746V6.848a3.755 3.755 0 0 1 3.755-3.754M7.917 9.5h3.987m-6.943 0h.281M7.917 14.32h3.987m-6.943 0h.281" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Detay</button>
+                <button class="nav-link" id="nav-statistics-tab" data-bs-toggle="tab" data-bs-target="#nav-statistics" type="button" role="tab" aria-controls="nav-statistics" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M5.362 12.303V6.121M10.132 12.303V2.687M14.905 12.305v-2.75M16.868 17.5h-14a2 2 0 0 1-2-2v-14" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> İstatistik</button>
+                <button class="nav-link" id="nav-gamer-statistics-tab" data-bs-toggle="tab" data-bs-target="#nav-gamer-statistics" type="button" role="tab" aria-controls="nav-gamer-statistics" aria-selected="false"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 9a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM12 6.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" fill="#000" class="fill"/><path fill-rule="evenodd" clip-rule="evenodd" d="M1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12 17.937 22.75 12 22.75 1.25 17.937 1.25 12ZM12 2.75a9.25 9.25 0 0 0-6.558 15.773c.18-.973.535-1.89 1.246-2.628C7.753 14.791 9.454 14.25 12 14.25c2.546 0 4.247.541 5.311 1.645.712.738 1.066 1.655 1.247 2.629A9.25 9.25 0 0 0 12 2.75Zm5.194 16.905c-.102-1.212-.365-2.1-.962-2.719-.65-.673-1.853-1.186-4.232-1.186-2.379 0-3.582.513-4.232 1.186-.597.62-.86 1.507-.962 2.72A9.207 9.207 0 0 0 12 21.25a9.208 9.208 0 0 0 5.194-1.595Z" fill="#000" class="fill"/></svg> Oyuncu İstatistikleri</button>
+                <button class="nav-link" id="nav-team-tab" data-bs-toggle="tab" data-bs-target="#nav-team" type="button" role="tab" aria-controls="nav-team" aria-selected="false"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.448 1.75c-.899 0-1.648 0-2.242.08-.628.084-1.195.27-1.65.725-.456.456-.642 1.023-.726 1.65-.08.595-.08 1.345-.08 2.243v.104c0 .898 0 1.648.08 2.242.084.628.27 1.195.726 1.65.455.456 1.022.642 1.65.726.594.08 1.343.08 2.242.08h.104c.899 0 1.648 0 2.242-.08.628-.084 1.195-.27 1.65-.726.456-.455.642-1.022.726-1.65.08-.594.08-1.344.08-2.242v-.104c0-.898 0-1.648-.08-2.242-.084-.628-.27-1.195-.726-1.65-.455-.456-1.022-.642-1.65-.726-.594-.08-1.343-.08-2.242-.08h-.104Zm-2.832 1.866c.13-.13.328-.237.79-.3.482-.064 1.13-.066 2.094-.066s1.612.002 2.095.067c.461.062.659.169.789.3.13.13.237.327.3.788.064.483.066 1.131.066 2.095 0 .964-.002 1.612-.067 2.095-.062.461-.169.659-.3.789-.13.13-.327.237-.788.3-.483.064-1.131.066-2.095.066-.964 0-1.612-.002-2.095-.067-.461-.062-.659-.169-.789-.3-.13-.13-.237-.327-.3-.788-.064-.483-.066-1.131-.066-2.095 0-.964.002-1.612.066-2.095.063-.461.17-.659.3-.789ZM6.448 12.75c-.898 0-1.648 0-2.242.08-.628.084-1.195.27-1.65.726-.456.455-.642 1.022-.726 1.65-.08.594-.08 1.343-.08 2.242v.104c0 .899 0 1.648.08 2.242.084.628.27 1.195.725 1.65.456.456 1.023.642 1.65.726.595.08 1.345.08 2.243.08h.104c.898 0 1.648 0 2.242-.08.628-.084 1.195-.27 1.65-.726.456-.455.642-1.022.726-1.65.08-.594.08-1.343.08-2.242v-.104c0-.899 0-1.648-.08-2.242-.084-.628-.27-1.195-.726-1.65-.455-.456-1.022-.642-1.65-.726-.594-.08-1.344-.08-2.242-.08h-.104Zm-2.832 1.866c.13-.13.328-.237.79-.3.482-.064 1.13-.066 2.094-.066s1.612.002 2.095.066c.461.063.659.17.789.3.13.13.237.328.3.79.064.482.066 1.13.066 2.094s-.002 1.612-.067 2.095c-.062.461-.169.659-.3.789-.13.13-.327.237-.788.3-.483.064-1.131.066-2.095.066-.964 0-1.612-.002-2.095-.067-.461-.062-.659-.169-.789-.3-.13-.13-.237-.327-.3-.788-.064-.483-.066-1.131-.066-2.095 0-.964.002-1.612.067-2.095.062-.461.169-.659.3-.789ZM1.75 6.5a4.75 4.75 0 1 1 9.5 0 4.75 4.75 0 0 1-9.5 0ZM6.5 3.25a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 0 0 0-6.5ZM12.75 17.5a4.75 4.75 0 1 1 9.5 0 4.75 4.75 0 0 1-9.5 0Zm4.75-3.25a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 0 0 0-6.5Z" fill="#000" class="fill" /></svg> Kadro</button>
+                <button class="nav-link" id="nav-chat-tab" data-bs-toggle="tab" data-bs-target="#nav-chat" type="button" role="tab" aria-controls="nav-chat" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="m8.823 17.735-1.421-1.427a2.153 2.153 0 0 0-1.526-.633H4.808a3.947 3.947 0 0 1-3.94-3.953v-6.94A3.946 3.946 0 0 1 4.808.831H14.93a3.945 3.945 0 0 1 3.938 3.951v6.94a3.946 3.946 0 0 1-3.938 3.953H13.86c-.572 0-1.12.227-1.525.633l-1.423 1.427c-.577.58-1.512.58-2.09 0ZM6.677 9.948h3.662M6.677 6.123h6.383" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Sohbet</button>
+                <button class="nav-link" id="nav-h2h-tab" data-bs-toggle="tab" data-bs-target="#nav-h2h" type="button" role="tab" aria-controls="nav-h2h" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M.876 7.963h15.699M12.254 1.5v2.872M5.201 1.5v2.872M16.578 9.864V6.93c.008-2.624-1.585-4.052-4.155-4.052h-7.39C2.469 2.878.868 4.306.868 6.93v7.9c0 2.664 1.601 4.126 4.165 4.126h2.15" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path clip-rule="evenodd" d="M17.432 15.638a3.862 3.862 0 1 1-7.724 0 3.862 3.862 0 0 1 7.724 0Z" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="m14.769 16.642-1.221-.73v-1.57M4.816 11.441h.01M4.816 14.918h.01M8.484 11.441h.01" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> H2H</button>
+                <button class="nav-link" id="nav-points-tab" data-bs-toggle="tab" data-bs-target="#nav-points" type="button" role="tab" aria-controls="nav-points" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path clip-rule="evenodd" d="m15.046 1.964.591 2.883a.885.885 0 0 0 .521.635l2.736 1.172a.872.872 0 0 1 .089 1.57l-2.588 1.425a.862.862 0 0 0-.447.683l-.261 2.922a.885.885 0 0 1-1.483.558l-2.19-2a.9.9 0 0 0-.798-.213l-2.897.636a.884.884 0 0 1-1.005-1.223L8.55 8.35a.865.865 0 0 0-.046-.814l-1.53-2.53a.873.873 0 0 1 .86-1.315l2.957.353a.888.888 0 0 0 .77-.289l1.955-2.201a.893.893 0 0 1 1.531.41Z" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.404 11.782a.714.714 0 0 0 .041.672l1.27 2.063a.73.73 0 0 1-.705 1.1l-2.437-.241a.742.742 0 0 0-.633.252L6.338 17.48a.73.73 0 0 1-1.27-.313l-.496-2.37a.711.711 0 0 0-.433-.517l-2.26-.919a.722.722 0 0 1-.079-1.294l2.13-1.226a.73.73 0 0 0 .365-.571l.206-2.42a.737.737 0 0 1 1.216-.485l1.816 1.615c.18.159.426.22.659.162" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Puan Durumu</button>
+                <button class="nav-link" id="nav-guess-tab" data-bs-toggle="tab" data-bs-target="#nav-guess" type="button" role="tab" aria-controls="nav-guess" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M11.98 19.5H8.018M11.98 1.5H8.018M1 12.482V8.52M19 12.482V8.52M9.736 15.037v.044M9.735 12.395c-.013-.965.865-1.375 1.517-1.746.796-.44 1.335-1.138 1.335-2.107A2.585 2.585 0 0 0 10 5.954a2.58 2.58 0 0 0-2.588 2.588M1.027 15.414c.313 2.233 1.795 3.803 4.047 4.066M14.89 19.48c2.253-.264 3.725-1.833 4.037-4.066M1.027 5.595C1.34 3.362 2.822 1.783 5.074 1.52M14.89 1.52c2.253.263 3.725 1.842 4.037 4.075" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Tahmin</button>
+
+            </div>
+        </nav>
+        <div class="container">
+            <div class="tab-content mt-4" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-detail" role="tabpanel" aria-labelledby="nav-detail-tab" tabindex="0">
+                    <div class="match-summary">
+                        <div class="summary-title">
+                            <p>SKOR</p>
+                        </div>
+                        <div class="table-wrapper basket-score">
+                            <table class="w-100">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="team">
+                                                <img src="assets/img/manu.png" alt="" width="48" height="48">
+                                                <p>M.United</p>
+                                            </div>
+                                        </td>
+                                        <td class="text-end"><strong>112</strong> <span>24</span> <span>24</span> <span>20</span> <span>44</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="team">
+                                                <img src="assets/img/manu.png" alt="" width="48" height="48">
+                                                <p>M.United</p>
+                                            </div>
+                                        </td>
+                                        <td class="text-end"><strong>100</strong> <span>16</span> <span>29</span> <span>31</span> <span>24</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-statistics" role="tabpanel" aria-labelledby="nav-statistics-tab" tabindex="0">
+                    <ul class="nav nav-tabs mb-3" id="pills-tab" role="tablist">
+                        <button class="nav-link ms-0 active" id="karsilasma-tab" data-bs-toggle="tab" data-bs-target="#karsilasma" type="button" role="tab" aria-controls="karsilasma" aria-selected="true">Karşılaşma</button>
+                        <button class="nav-link" id="one-quarter-tab" data-bs-toggle="tab" data-bs-target="#one-quarter" type="button" role="tab" aria-controls="#one-quarter-tab" aria-selected="false">1. Çeyrek</button>
+                        <button class="nav-link" id="two-quarter-tab" data-bs-toggle="tab" data-bs-target="#two-quarter" type="button" role="tab" aria-controls="two-quarter-tab" aria-selected="false">2. Çeyrek</button>
+                        <button class="nav-link" id="three-quarter-tab" data-bs-toggle="tab" data-bs-target="#three-quarter" type="button" role="tab" aria-controls="three-quarter-tab" aria-selected="false">3. Çeyrek</button>
+                        <button class="nav-link" id="four-quarter-tab" data-bs-toggle="tab" data-bs-target="#four-quarter" type="button" role="tab" aria-controls="four-quarter-tab" aria-selected="false">4. Çeyrek</button>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="karsilasma" role="tabpanel" aria-labelledby="karsilasma-tab" tabindex="0">
+                            <div class="statistic-box mb-3">
+                                <div class="row">
+                                    <div class="col-2">
+                                        1.80
+                                    </div>
+                                    <div class="col-8 text-center">Gol Beklentisi</div>
+                                    <div class="col-2 text-end">
+                                        1.14
+                                    </div>
+                                </div>
+                                <div class="row margin-5 mt-2">
+                                    <div class="col-6">
+                                        <div class="progress first" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-info" style="width: 25%"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-warning" style="width: 25%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="statistic-box mb-3">
+                                <div class="row">
+                                    <div class="col-2">
+                                        %61
+                                    </div>
+                                    <div class="col-8 text-center">Topa Sahip Olma</div>
+                                    <div class="col-2 text-end">
+                                        %39
+                                    </div>
+                                </div>
+                                <div class="row margin-5 mt-2">
+                                    <div class="col-6">
+                                        <div class="progress first" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-info" style="width: 25%"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-warning" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="statistic-box mb-3">
+                                <div class="row">
+                                    <div class="col-2">
+                                        1.80
+                                    </div>
+                                    <div class="col-8 text-center">Gol Beklentisi</div>
+                                    <div class="col-2 text-end">
+                                        1.14
+                                    </div>
+                                </div>
+                                <div class="row margin-5 mt-2">
+                                    <div class="col-6">
+                                        <div class="progress first" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-info" style="width: 50%"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-warning" style="width: 50%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="statistic-box mb-3">
+                                <div class="row">
+                                    <div class="col-2">
+                                        1.80
+                                    </div>
+                                    <div class="col-8 text-center">Gol Beklentisi</div>
+                                    <div class="col-2 text-end">
+                                        1.14
+                                    </div>
+                                </div>
+                                <div class="row margin-5 mt-2">
+                                    <div class="col-6">
+                                        <div class="progress first" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-info" style="width: 25%"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-warning" style="width: 25%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="statistic-box mb-3">
+                                <div class="row">
+                                    <div class="col-2">
+                                        1.80
+                                    </div>
+                                    <div class="col-8 text-center">Gol Beklentisi</div>
+                                    <div class="col-2 text-end">
+                                        1.14
+                                    </div>
+                                </div>
+                                <div class="row margin-5 mt-2">
+                                    <div class="col-6">
+                                        <div class="progress first" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-info" style="width: 25%"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-warning" style="width: 25%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="statistic-box mb-3">
+                                <div class="row">
+                                    <div class="col-2">
+                                        1.80
+                                    </div>
+                                    <div class="col-8 text-center">Gol Beklentisi</div>
+                                    <div class="col-2 text-end">
+                                        1.14
+                                    </div>
+                                </div>
+                                <div class="row margin-5 mt-2">
+                                    <div class="col-6">
+                                        <div class="progress first" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-info" style="width: 25%"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-warning" style="width: 25%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="statistic-box mb-3">
+                                <div class="row">
+                                    <div class="col-2">
+                                        1.80
+                                    </div>
+                                    <div class="col-8 text-center">Gol Beklentisi</div>
+                                    <div class="col-2 text-end">
+                                        1.14
+                                    </div>
+                                </div>
+                                <div class="row margin-5 mt-2">
+                                    <div class="col-6">
+                                        <div class="progress first" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-info" style="width: 25%"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-warning" style="width: 25%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="statistic-box mb-3">
+                                <div class="row">
+                                    <div class="col-2">
+                                        1.80
+                                    </div>
+                                    <div class="col-8 text-center">Gol Beklentisi</div>
+                                    <div class="col-2 text-end">
+                                        1.14
+                                    </div>
+                                </div>
+                                <div class="row margin-5 mt-2">
+                                    <div class="col-6">
+                                        <div class="progress first" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-info" style="width: 25%"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-warning" style="width: 25%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="one-quarter" role="tabpanel" aria-labelledby="#one-quarter-tab" tabindex="0">...</div>
+                        <div class="tab-pane fade" id="two-quarter" role="tabpanel" aria-labelledby="two-quarter-tab" tabindex="0">...</div>
+                        <div class="tab-pane fade" id="three-quarter" role="tabpanel" aria-labelledby="three-quarter-tab" tabindex="0">...</div>
+                        <div class="tab-pane fade" id="four-quarter" role="tabpanel" aria-labelledby="four-quarter-tab" tabindex="0">...</div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-gamer-statistics" role="tabpanel" aria-labelledby="nav-gamer-statistics-tab" tabindex="0">
+                    <ul class="nav nav-tabs mb-3" id="pills-tab" role="tablist">
+                        <button class="nav-link ms-0 active" id="team-all-tab" data-bs-toggle="tab" data-bs-target="#team-all" type="button" role="tab" aria-controls="all" aria-selected="true">Hepsi</button>
+                        <button class="nav-link" id="team-1-tab" data-bs-toggle="tab" data-bs-target="#team-1" type="button" role="tab" aria-controls="#team-1-tab" aria-selected="false">M. United</button>
+                        <button class="nav-link" id="team-2-tab" data-bs-toggle="tab" data-bs-target="#team-2" type="button" role="tab" aria-controls="team-2-tab" aria-selected="false">Liverpool</button>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="team-all" role="tabpanel" aria-labelledby="team-all-tab" tabindex="0">
+                            <div class="table-wrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="sticky">OYUNCU</th>
+                                            <th class="text-center">TAKIM</th>
+                                            <th class="text-center">SAY</th>
+                                            <th class="text-center">RIB</th>
+                                            <th class="text-center">AST</th>
+                                            <th class="text-center">DAK</th>
+                                            <th class="text-center">BŞ</th>
+                                            <th class="text-center">ŞG</th>
+                                            <th class="text-center">B2S</th>
+                                            <th class="text-center">2SG</th>
+                                            <th class="text-center">B3S</th>
+                                            <th class="text-center">B3S</th>
+                                            <th class="text-center">BSA</th>
+                                            <th class="text-center">SA</th>
+                                            <th>+/-</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="sticky">
+                                                <div class="team">
+                                                    <p>🇦🇿 Brunson J.</p>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">MANU</td>
+                                            <td class="text-center">23</td>
+                                            <td class="text-center">9</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">36:11</td>
+                                            <td class="text-center">9</td>
+                                            <td class="text-center">20</td>
+                                            <td class="text-center">-</td>
+                                            <td class="text-center">-</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">5</td>
+                                            <td>-23</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sticky">
+                                                <div class="team">
+                                                    <p>🇦🇿 Brunson J.</p>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">MANU</td>
+                                            <td class="text-center">23</td>
+                                            <td class="text-center">9</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">36:11</td>
+                                            <td class="text-center">9</td>
+                                            <td class="text-center">20</td>
+                                            <td class="text-center">-</td>
+                                            <td class="text-center">-</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">5</td>
+                                            <td>-23</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sticky">
+                                                <div class="team">
+                                                    <p>🇦🇿 Brunson J.</p>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">MANU</td>
+                                            <td class="text-center">23</td>
+                                            <td class="text-center">9</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">36:11</td>
+                                            <td class="text-center">9</td>
+                                            <td class="text-center">20</td>
+                                            <td class="text-center">-</td>
+                                            <td class="text-center">-</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">5</td>
+                                            <td>-23</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sticky">
+                                                <div class="team">
+                                                    <p>🇦🇿 Brunson J.</p>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">MANU</td>
+                                            <td class="text-center">23</td>
+                                            <td class="text-center">9</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">36:11</td>
+                                            <td class="text-center">9</td>
+                                            <td class="text-center">20</td>
+                                            <td class="text-center">-</td>
+                                            <td class="text-center">-</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">5</td>
+                                            <td>-23</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sticky">
+                                                <div class="team">
+                                                    <p>🇦🇿 Brunson J.</p>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">MANU</td>
+                                            <td class="text-center">23</td>
+                                            <td class="text-center">9</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">36:11</td>
+                                            <td class="text-center">9</td>
+                                            <td class="text-center">20</td>
+                                            <td class="text-center">-</td>
+                                            <td class="text-center">-</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">5</td>
+                                            <td>-23</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sticky">
+                                                <div class="team">
+                                                    <p>🇦🇿 Brunson J.</p>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">MANU</td>
+                                            <td class="text-center">23</td>
+                                            <td class="text-center">9</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">36:11</td>
+                                            <td class="text-center">9</td>
+                                            <td class="text-center">20</td>
+                                            <td class="text-center">-</td>
+                                            <td class="text-center">-</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">5</td>
+                                            <td>-23</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sticky">
+                                                <div class="team">
+                                                    <p>🇦🇿 Brunson J.</p>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">MANU</td>
+                                            <td class="text-center">23</td>
+                                            <td class="text-center">9</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">36:11</td>
+                                            <td class="text-center">9</td>
+                                            <td class="text-center">20</td>
+                                            <td class="text-center">-</td>
+                                            <td class="text-center">-</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">5</td>
+                                            <td>-23</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sticky">
+                                                <div class="team">
+                                                    <p>🇦🇿 Brunson J.</p>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">MANU</td>
+                                            <td class="text-center">23</td>
+                                            <td class="text-center">9</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">36:11</td>
+                                            <td class="text-center">9</td>
+                                            <td class="text-center">20</td>
+                                            <td class="text-center">-</td>
+                                            <td class="text-center">-</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">5</td>
+                                            <td>-23</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="team-1" role="tabpanel" aria-labelledby="team-1-tab" tabindex="0">...</div>
+                        <div class="tab-pane fade" id="team-2" role="tabpanel" aria-labelledby="team-2-tab" tabindex="0">...</div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-team" role="tabpanel" aria-labelledby="nav-team-tab" tabindex="0">
+                    <div class="match-summary">
+                        <div class="summary-title">
+                            <p>KADROLAR</p>
+                        </div>
+                        <ul class="summary-detail striped">
+                            <li class="d-flex justify-content-between">
+                                <p>5 🇦🇿 Achiuwa P.</p>
+                                <p>Achiuwa P. 🇦🇿 5</p>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <p>5 🇦🇿 Achiuwa P.</p>
+                                <p>Achiuwa P. 🇦🇿 5</p>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <p>5 🇦🇿 Achiuwa P.</p>
+                                <p>Achiuwa P. 🇦🇿 5</p>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <p>5 🇦🇿 Achiuwa P.</p>
+                                <p>Achiuwa P. 🇦🇿 5</p>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <p>5 🇦🇿 Achiuwa P.</p>
+                                <p>Achiuwa P. 🇦🇿 5</p>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <p>5 🇦🇿 Achiuwa P.</p>
+                                <p>Achiuwa P. 🇦🇿 5</p>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <p>5 🇦🇿 Achiuwa P.</p>
+                                <p>Achiuwa P. 🇦🇿 5</p>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <p>5 🇦🇿 Achiuwa P.</p>
+                                <p>Achiuwa P. 🇦🇿 5</p>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <p>5 🇦🇿 Achiuwa P.</p>
+                                <p>Achiuwa P. 🇦🇿 5</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="match-summary">
+                        <div class="summary-title">
+                            <p>YEDEKLER</p>
+                        </div>
+                        <ul class="summary-detail striped">
+                            <li class="d-flex justify-content-between">
+                                <p>5 🇦🇿 Achiuwa P.</p>
+                                <p>Achiuwa P. 🇦🇿 5</p>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <p>5 🇦🇿 Achiuwa P.</p>
+                                <p>Achiuwa P. 🇦🇿 5</p>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <p>5 🇦🇿 Achiuwa P.</p>
+                                <p>Achiuwa P. 🇦🇿 5</p>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <p>5 🇦🇿 Achiuwa P.</p>
+                                <p>Achiuwa P. 🇦🇿 5</p>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <p>5 🇦🇿 Achiuwa P.</p>
+                                <p>Achiuwa P. 🇦🇿 5</p>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <p>5 🇦🇿 Achiuwa P.</p>
+                                <p>Achiuwa P. 🇦🇿 5</p>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <p>5 🇦🇿 Achiuwa P.</p>
+                                <p>Achiuwa P. 🇦🇿 5</p>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <p>5 🇦🇿 Achiuwa P.</p>
+                                <p>Achiuwa P. 🇦🇿 5</p>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <p>5 🇦🇿 Achiuwa P.</p>
+                                <p>Achiuwa P. 🇦🇿 5</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-chat" role="tabpanel" aria-labelledby="nav-chat-tab" tabindex="0">
+                    <div class="chats">
+                        <div class="chat-item">
+                            <div class="user">
+                                <p class="name">🇦🇿 Kullanıcı123214</p>
+                                <span>2dk</span>
+                            </div>
+                            <div class="comment">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                            </div>
+                        </div>
+                        <div class="chat-item">
+                            <div class="user">
+                                <p class="name">🇦🇿 Kullanıcı123214</p>
+                                <span>2dk</span>
+                            </div>
+                            <div class="comment">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                            </div>
+                        </div>
+                        <div class="chat-item">
+                            <div class="user">
+                                <p class="name">🇦🇿 Kullanıcı123214</p>
+                                <span>2dk</span>
+                            </div>
+                            <div class="comment">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                            </div>
+                        </div>
+                        <div class="chat-item">
+                            <div class="user">
+                                <p class="name">🇦🇿 Kullanıcı123214</p>
+                                <span>2dk</span>
+                            </div>
+                            <div class="comment">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                            </div>
+                        </div>
+                        <div class="chat-item">
+                            <div class="user">
+                                <p class="name">🇦🇿 Kullanıcı123214</p>
+                                <span>2dk</span>
+                            </div>
+                            <div class="comment">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                            </div>
+                        </div>
+                        <div class="chat-item">
+                            <div class="user">
+                                <p class="name">🇦🇿 Kullanıcı123214</p>
+                                <span>2dk</span>
+                            </div>
+                            <div class="comment">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                            </div>
+                        </div>
+                        <div class="chat-item">
+                            <div class="user">
+                                <p class="name">🇦🇿 Kullanıcı123214</p>
+                                <span>2dk</span>
+                            </div>
+                            <div class="comment">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                            </div>
+                        </div>
+                        <div class="chat-item">
+                            <div class="user">
+                                <p class="name">🇦🇿 Kullanıcı123214</p>
+                                <span>2dk</span>
+                            </div>
+                            <div class="comment">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                            </div>
+                        </div>
+                        <div class="chat-item">
+                            <div class="user">
+                                <p class="name">🇦🇿 Kullanıcı123214</p>
+                                <span>2dk</span>
+                            </div>
+                            <div class="comment">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                            </div>
+                        </div>
+                        <div class="chat-item">
+                            <div class="user">
+                                <p class="name">🇦🇿 Kullanıcı123214</p>
+                                <span>2dk</span>
+                            </div>
+                            <div class="comment">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                            </div>
+                        </div>
+                        <div class="chat-item">
+                            <div class="user">
+                                <p class="name">🇦🇿 Kullanıcı123214</p>
+                                <span>2dk</span>
+                            </div>
+                            <div class="comment">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                            </div>
+                        </div>
+                        <div class="chat-item">
+                            <div class="user">
+                                <p class="name">🇦🇿 Kullanıcı123214</p>
+                                <span>2dk</span>
+                            </div>
+                            <div class="comment">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                            </div>
+                        </div>
+                        <div class="chat-item">
+                            <div class="user">
+                                <p class="name">🇦🇿 Kullanıcı123214</p>
+                                <span>2dk</span>
+                            </div>
+                            <div class="comment">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                            </div>
+                        </div>
+                        <div class="chat-item">
+                            <div class="user">
+                                <p class="name">🇦🇿 Kullanıcı123214</p>
+                                <span>2dk</span>
+                            </div>
+                            <div class="comment">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                            </div>
+                        </div>
+                        <div class="chat-item">
+                            <div class="user">
+                                <p class="name">🇦🇿 Kullanıcı123214</p>
+                                <span>2dk</span>
+                            </div>
+                            <div class="comment">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                            </div>
+                        </div>
+                        <div class="chat-item">
+                            <div class="user">
+                                <p class="name">🇦🇿 Kullanıcı123214</p>
+                                <span>2dk</span>
+                            </div>
+                            <div class="comment">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                            </div>
+                        </div>
+                        <div class="chat-item">
+                            <div class="user">
+                                <p class="name">🇦🇿 Kullanıcı123214</p>
+                                <span>2dk</span>
+                            </div>
+                            <div class="comment">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                            </div>
+                        </div>
+                        <div class="chat-item">
+                            <div class="user">
+                                <p class="name">🇦🇿 Kullanıcı123214</p>
+                                <span>2dk</span>
+                            </div>
+                            <div class="comment">
+                                <p>Lorem ipsum dolor sit amet,</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="chat-panel active">
+                        <button type="button" class="language-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24"><path fill="#D9D9D9" d="M0 0h24v24H0z"/></mask><g mask="url(#a)" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7.783 3h8.435C19.166 3 21 5.081 21 8.026v7.948C21 18.919 19.166 21 16.217 21H7.783C4.835 21 3 18.919 3 15.974V8.026C3 5.081 4.844 3 7.783 3Z"/><path d="M12.639 14.984c.73.292 1.152.334 1.988.334.487 0 1.172-.22 1.63-.317"/><path d="m12.008 16.224 2.449-4.798 2.45 4.798M8.809 10.57a6.41 6.41 0 0 0 1.278 2.555c.206.248.433.482.675.699"/><path d="M12.415 8.645c.058.122-.24 4.445-5.021 5.908M7.094 8.645h6.949M10.389 7.777v.865"/></g></svg></button>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" placeholder="Bir mesaj gönderin...">
+                            </div>
+                            <div class="form-group">
+                                <button type="button" id="sendBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24"><path fill="#D9D9D9" d="M0 0h24v24H0z"/></mask><g mask="url(#a)"><path d="m15.832 8.175-5.723 5.784-6.51-4.071c-.932-.584-.738-2 .317-2.31L19.37 3.054c.966-.283 1.862.62 1.575 1.589l-4.573 15.445c-.313 1.056-1.722 1.245-2.3.308l-3.967-6.435" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g></svg></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-h2h" role="tabpanel" aria-labelledby="nav-h2h-tab" tabindex="0">
+                    <div class="encounter">
+                        <div class="team mb-3">
+                            <img src="assets/img/liverpool.png" alt="" width="48" height="48">
+                            <div class="text">
+                                <h4>Liverpool</h4>
+                                <small>Son karşılaşmalar</small>
+                            </div>
+                        </div>
+
+                        <div class="encounter-box mb-2">
+                            <div class="date">
+                                <p>06.01.24</p>
+                                <span>🇮🇹SA</span>
+                            </div>
+                            <div class="encounter-teams">
+                                <div class="team">
+                                    <div class="logo">
+                                        <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                        <p>Liverpool</p>
+                                    </div>
+                                    <div class="score">
+                                        2
+                                    </div>
+                                </div>
+                                <div class="team">
+                                    <div class="logo">
+                                        <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                        <p>Liverpool</p>
+                                    </div>
+                                    <div class="score">
+                                        2
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="score-badge badge-success">G</span>
+                        </div>
+                        <div class="encounter-box mb-2">
+                            <div class="date">
+                                <p>06.01.24</p>
+                                <span>🇮🇹SA</span>
+                            </div>
+                            <div class="encounter-teams">
+                                <div class="team">
+                                    <div class="logo">
+                                        <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                        <p>Liverpool</p>
+                                    </div>
+                                    <div class="score">
+                                        2
+                                    </div>
+                                </div>
+                                <div class="team">
+                                    <div class="logo">
+                                        <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                        <p>Liverpool</p>
+                                    </div>
+                                    <div class="score">
+                                        2
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="score-badge badge-success">G</span>
+                        </div>
+                        <div class="encounter-box mb-2">
+                            <div class="date">
+                                <p>06.01.24</p>
+                                <span>🇮🇹SA</span>
+                            </div>
+                            <div class="encounter-teams">
+                                <div class="team">
+                                    <div class="logo">
+                                        <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                        <p>Liverpool</p>
+                                    </div>
+                                    <div class="score">
+                                        2
+                                    </div>
+                                </div>
+                                <div class="team">
+                                    <div class="logo">
+                                        <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                        <p>Liverpool</p>
+                                    </div>
+                                    <div class="score">
+                                        2
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="score-badge badge-success">G</span>
+                        </div>
+
+                        <button class="btn btn-primary encounter-more" type="button" data-bs-toggle="collapse" data-bs-target="#encounter-1" aria-expanded="false" aria-controls="encounter-1">
+                            Daha fazla göster <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" fill="none"><path d="M9 1 5 5 1 1" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+
+                        <div class="collapse p-0 encounter-collapse" id="encounter-1">
+                            <div class="card card-body" style="border:none;padding:0">
+                                <div class="encounter-box mb-2">
+                                    <div class="date">
+                                        <p>06.01.24</p>
+                                        <span>🇮🇹SA</span>
+                                    </div>
+                                    <div class="encounter-teams">
+                                        <div class="team">
+                                            <div class="logo">
+                                                <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                                <p>Liverpool</p>
+                                            </div>
+                                            <div class="score">
+                                                2
+                                            </div>
+                                        </div>
+                                        <div class="team">
+                                            <div class="logo">
+                                                <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                                <p>Liverpool</p>
+                                            </div>
+                                            <div class="score">
+                                                2
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="score-badge badge-success">G</span>
+                                </div>
+                                <div class="encounter-box mb-2">
+                                    <div class="date">
+                                        <p>06.01.24</p>
+                                        <span>🇮🇹SA</span>
+                                    </div>
+                                    <div class="encounter-teams">
+                                        <div class="team">
+                                            <div class="logo">
+                                                <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                                <p>Liverpool</p>
+                                            </div>
+                                            <div class="score">
+                                                2
+                                            </div>
+                                        </div>
+                                        <div class="team">
+                                            <div class="logo">
+                                                <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                                <p>Liverpool</p>
+                                            </div>
+                                            <div class="score">
+                                                2
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="score-badge badge-success">G</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="encounter">
+                        <div class="team mb-3">
+                            <img src="assets/img/liverpool.png" alt="" width="48" height="48">
+                            <div class="text">
+                                <h4>Liverpool</h4>
+                                <small>Son karşılaşmalar</small>
+                            </div>
+                        </div>
+
+                        <div class="encounter-box mb-2">
+                            <div class="date">
+                                <p>06.01.24</p>
+                                <span>🇮🇹SA</span>
+                            </div>
+                            <div class="encounter-teams">
+                                <div class="team">
+                                    <div class="logo">
+                                        <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                        <p>Liverpool</p>
+                                    </div>
+                                    <div class="score">
+                                        2
+                                    </div>
+                                </div>
+                                <div class="team">
+                                    <div class="logo">
+                                        <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                        <p>Liverpool</p>
+                                    </div>
+                                    <div class="score">
+                                        2
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="score-badge badge-success">G</span>
+                        </div>
+                        <div class="encounter-box mb-2">
+                            <div class="date">
+                                <p>06.01.24</p>
+                                <span>🇮🇹SA</span>
+                            </div>
+                            <div class="encounter-teams">
+                                <div class="team">
+                                    <div class="logo">
+                                        <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                        <p>Liverpool</p>
+                                    </div>
+                                    <div class="score">
+                                        2
+                                    </div>
+                                </div>
+                                <div class="team">
+                                    <div class="logo">
+                                        <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                        <p>Liverpool</p>
+                                    </div>
+                                    <div class="score">
+                                        2
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="score-badge badge-success">G</span>
+                        </div>
+                        <div class="encounter-box mb-2">
+                            <div class="date">
+                                <p>06.01.24</p>
+                                <span>🇮🇹SA</span>
+                            </div>
+                            <div class="encounter-teams">
+                                <div class="team">
+                                    <div class="logo">
+                                        <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                        <p>Liverpool</p>
+                                    </div>
+                                    <div class="score">
+                                        2
+                                    </div>
+                                </div>
+                                <div class="team">
+                                    <div class="logo">
+                                        <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                        <p>Liverpool</p>
+                                    </div>
+                                    <div class="score">
+                                        2
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="score-badge badge-success">G</span>
+                        </div>
+
+                        <button class="btn btn-primary encounter-more" type="button" data-bs-toggle="collapse" data-bs-target="#encounter-2" aria-expanded="false" aria-controls="encounter-2">
+                            Daha fazla göster <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" fill="none"><path d="M9 1 5 5 1 1" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+
+                        <div class="collapse p-0 encounter-collapse" id="encounter-2">
+                            <div class="card card-body" style="border:none;padding:0">
+                                <div class="encounter-box mb-2">
+                                    <div class="date">
+                                        <p>06.01.24</p>
+                                        <span>🇮🇹SA</span>
+                                    </div>
+                                    <div class="encounter-teams">
+                                        <div class="team">
+                                            <div class="logo">
+                                                <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                                <p>Liverpool</p>
+                                            </div>
+                                            <div class="score">
+                                                2
+                                            </div>
+                                        </div>
+                                        <div class="team">
+                                            <div class="logo">
+                                                <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                                <p>Liverpool</p>
+                                            </div>
+                                            <div class="score">
+                                                2
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="score-badge badge-success">G</span>
+                                </div>
+                                <div class="encounter-box mb-2">
+                                    <div class="date">
+                                        <p>06.01.24</p>
+                                        <span>🇮🇹SA</span>
+                                    </div>
+                                    <div class="encounter-teams">
+                                        <div class="team">
+                                            <div class="logo">
+                                                <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                                <p>Liverpool</p>
+                                            </div>
+                                            <div class="score">
+                                                2
+                                            </div>
+                                        </div>
+                                        <div class="team">
+                                            <div class="logo">
+                                                <img src="assets/img/liverpool.png" alt="" width="20" height="20">
+                                                <p>Liverpool</p>
+                                            </div>
+                                            <div class="score">
+                                                2
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="score-badge badge-success">G</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-points" role="tabpanel" aria-labelledby="nav-points-tab" tabindex="0">
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="sticky">Takım</th>
+                                    <th class="text-center">O</th>
+                                    <th class="text-center">G</th>
+                                    <th class="text-center">B</th>
+                                    <th class="text-center">M</th>
+                                    <th class="text-center">G</th>
+                                    <th class="text-center">AV</th>
+                                    <th class="text-center">P</th>
+                                    <th>Form</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="sticky">
+                                        <div class="team">
+                                            <span class="number">1</span>
+                                            <img src="assets/img/manu.png" alt="" width="48" height="48">
+                                            <p>M.United</p>
+                                        </div>
+                                    </td>
+                                    <td>19</td>
+                                    <td>15</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>44:9</td>
+                                    <td>35</td>
+                                    <td>48</td>
+                                    <td>
+                                        <span class="score-badge badge-light">?</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-warning">B</span>
+                                        <span class="score-badge badge-danger">M</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-success">G</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky">
+                                        <div class="team">
+                                            <span class="number">1</span>
+                                            <img src="assets/img/manu.png" alt="" width="48" height="48">
+                                            <p>M.United</p>
+                                        </div>
+                                    </td>
+                                    <td>19</td>
+                                    <td>15</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>44:9</td>
+                                    <td>35</td>
+                                    <td>48</td>
+                                    <td>
+                                        <span class="score-badge badge-light">?</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-warning">B</span>
+                                        <span class="score-badge badge-danger">M</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-success">G</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky">
+                                        <div class="team">
+                                            <span class="number">1</span>
+                                            <img src="assets/img/manu.png" alt="" width="48" height="48">
+                                            <p>M.United</p>
+                                        </div>
+                                    </td>
+                                    <td>19</td>
+                                    <td>15</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>44:9</td>
+                                    <td>35</td>
+                                    <td>48</td>
+                                    <td>
+                                        <span class="score-badge badge-light">?</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-warning">B</span>
+                                        <span class="score-badge badge-danger">M</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-success">G</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky">
+                                        <div class="team">
+                                            <span class="number">1</span>
+                                            <img src="assets/img/manu.png" alt="" width="48" height="48">
+                                            <p>M.United</p>
+                                        </div>
+                                    </td>
+                                    <td>19</td>
+                                    <td>15</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>44:9</td>
+                                    <td>35</td>
+                                    <td>48</td>
+                                    <td>
+                                        <span class="score-badge badge-light">?</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-warning">B</span>
+                                        <span class="score-badge badge-danger">M</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-success">G</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky">
+                                        <div class="team">
+                                            <span class="number">1</span>
+                                            <img src="assets/img/manu.png" alt="" width="48" height="48">
+                                            <p>M.United</p>
+                                        </div>
+                                    </td>
+                                    <td>19</td>
+                                    <td>15</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>44:9</td>
+                                    <td>35</td>
+                                    <td>48</td>
+                                    <td>
+                                        <span class="score-badge badge-light">?</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-warning">B</span>
+                                        <span class="score-badge badge-danger">M</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-success">G</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky">
+                                        <div class="team">
+                                            <span class="number">1</span>
+                                            <img src="assets/img/manu.png" alt="" width="48" height="48">
+                                            <p>M.United</p>
+                                        </div>
+                                    </td>
+                                    <td>19</td>
+                                    <td>15</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>44:9</td>
+                                    <td>35</td>
+                                    <td>48</td>
+                                    <td>
+                                        <span class="score-badge badge-light">?</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-warning">B</span>
+                                        <span class="score-badge badge-danger">M</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-success">G</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky">
+                                        <div class="team">
+                                            <span class="number">1</span>
+                                            <img src="assets/img/manu.png" alt="" width="48" height="48">
+                                            <p>M.United</p>
+                                        </div>
+                                    </td>
+                                    <td>19</td>
+                                    <td>15</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>44:9</td>
+                                    <td>35</td>
+                                    <td>48</td>
+                                    <td>
+                                        <span class="score-badge badge-light">?</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-warning">B</span>
+                                        <span class="score-badge badge-danger">M</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-success">G</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky">
+                                        <div class="team">
+                                            <span class="number">1</span>
+                                            <img src="assets/img/manu.png" alt="" width="48" height="48">
+                                            <p>M.United</p>
+                                        </div>
+                                    </td>
+                                    <td>19</td>
+                                    <td>15</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>44:9</td>
+                                    <td>35</td>
+                                    <td>48</td>
+                                    <td>
+                                        <span class="score-badge badge-light">?</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-warning">B</span>
+                                        <span class="score-badge badge-danger">M</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-success">G</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky">
+                                        <div class="team">
+                                            <span class="number">1</span>
+                                            <img src="assets/img/manu.png" alt="" width="48" height="48">
+                                            <p>M.United</p>
+                                        </div>
+                                    </td>
+                                    <td>19</td>
+                                    <td>15</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>44:9</td>
+                                    <td>35</td>
+                                    <td>48</td>
+                                    <td>
+                                        <span class="score-badge badge-light">?</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-warning">B</span>
+                                        <span class="score-badge badge-danger">M</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-success">G</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky">
+                                        <div class="team">
+                                            <span class="number">1</span>
+                                            <img src="assets/img/manu.png" alt="" width="48" height="48">
+                                            <p>M.United</p>
+                                        </div>
+                                    </td>
+                                    <td>19</td>
+                                    <td>15</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>44:9</td>
+                                    <td>35</td>
+                                    <td>48</td>
+                                    <td>
+                                        <span class="score-badge badge-light">?</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-warning">B</span>
+                                        <span class="score-badge badge-danger">M</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-success">G</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky">
+                                        <div class="team">
+                                            <span class="number">1</span>
+                                            <img src="assets/img/manu.png" alt="" width="48" height="48">
+                                            <p>M.United</p>
+                                        </div>
+                                    </td>
+                                    <td>19</td>
+                                    <td>15</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>44:9</td>
+                                    <td>35</td>
+                                    <td>48</td>
+                                    <td>
+                                        <span class="score-badge badge-light">?</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-warning">B</span>
+                                        <span class="score-badge badge-danger">M</span>
+                                        <span class="score-badge badge-success">G</span>
+                                        <span class="score-badge badge-success">G</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-guess" role="tabpanel" aria-labelledby="nav-guess-tab" tabindex="0">...</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/main.min.js"></script>
+  
+<script src="assets/js/bootstrap-table.min.js"></script>
+<script src="assets/js/bootstrap-table-fixed-columns.min.js"></script>
+
+<script>
+    function addFav(e) {
+        e.classList.toggle("fav");
+    }
+
+    $('.encounter-more').on('click',function(){
+        $(this).css('display','none')
+    })
+
+
+    new bootstrap.Toast(document.querySelector('#goalToast')).show();
+
+
+    const toastTrigger = document.getElementById('sendBtn')
+    const toastLiveExample = document.getElementById('loginToast')
+
+    if (toastTrigger) {
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+    toastTrigger.addEventListener('click', () => {
+        toastBootstrap.show()
+    })
+    }
+    
+
+
+
+
+</script>
+
+</body>
+</html>

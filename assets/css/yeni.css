@@ -1,0 +1,240 @@
+.balance {
+	 background-color: #259954;
+	 padding: 16px;
+	 border-radius: 16px;
+}
+ .balance span {
+	 text-align: center;
+	 display: block;
+	 border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	 color: rgba(255, 255, 255, 0.8);
+	 font-weight: 400;
+	 font-size: 20px;
+	 padding-bottom: 15px;
+	 margin-bottom: 15px;
+}
+ .balance p {
+	 color: #fff;
+	 font-size: 34px !important;
+	 font-weight: 600 !important;
+	 text-align: center;
+	 margin-bottom: 0;
+}
+ .balance-form {
+	 background-color: #f2f2f7;
+	 border-radius: 16px;
+	 padding: 12px;
+}
+ .balance-form .form-control {
+	 background-color: #fff;
+	 padding-left: 16px;
+}
+ .balance-form h4 {
+	 text-align: center;
+	 font-size: 16px;
+	 margin: 10px 0 20px 0;
+}
+ .main-menu li a {
+	 text-decoration: none;
+	 color: #000;
+	 font-weight: 400;
+}
+ .main-menu li .dropdown-menu {
+	 position: static !important;
+	 transform: none !important;
+	 margin-left: 0 !important;
+	 padding: 15px;
+	 border: none;
+	 background-color: #f5f5f5;
+}
+ .league-content {
+	 display: flex;
+	 align-items: center;
+}
+ .league-content .league-img {
+	 width: 70px;
+}
+ .league-content .league-img img {
+	 width: 70px;
+}
+ .league-content .league-txt {
+	 margin-left: 20px;
+	 width: calc(100% - 90px);
+}
+ .league-content .league-txt h1 {
+	 font-size: 24px;
+	 margin: 0;
+}
+ .league-content .league-txt small {
+	 display: block;
+	 color: rgba(0, 0, 0, .6);
+}
+ .league-content .league-txt p {
+	 color: rgba(0, 0, 0, .6);
+	 margin: 0;
+	 font-size: 14px;
+}
+ .league-content .league-txt p strong {
+	 font-weight: 600;
+	 color: #000;
+}
+ .custom-tab .nav-tabs {
+	 white-space: nowrap;
+	 flex-wrap: nowrap;
+	 overflow: scroll;
+}
+ .custom-tab .nav-tabs .nav-link {
+	 border-top: none;
+	 border-right: none;
+	 border-left: none;
+	 border-width: 2px;
+	 color: #000;
+	 font-size: 14px;
+}
+ .custom-tab .nav-tabs .nav-link.active {
+	 border-color: #259954;
+	 color: #259954;
+}
+ .divider {
+	 background-color: #f2f2f2;
+	 padding: 5px 15px;
+	 font-size: 14px;
+	 color: rgba(0, 0, 0, .6);
+	 text-decoration: none;
+}
+ .match-list-item {
+	 padding: 10px 15px;
+	 border-bottom: 1px solid #eee;
+	 margin: 0;
+	 color: #000;
+	 text-decoration: none;
+	 display: block;
+	 position: relative;
+}
+ .match-list-item.team {
+	 padding-left: 100px;
+}
+ .match-list-item.team > span {
+	 left: 15px;
+	 right: auto;
+	 font-size: 12px;
+}
+ .match-list-item.team .team-row {
+	 padding-right: 40px;
+}
+ .match-list-item.team .score-badge {
+	 position: absolute;
+	 top: 23px;
+	 right: 15px;
+}
+ .match-list-item:hover {
+	 color: #000;
+}
+ .match-list-item.v2 > span {
+	 right: 15px;
+}
+ .match-list-item > span {
+	 position: absolute;
+	 top: 0;
+	 right: 40px;
+	 height: 100%;
+	 width: auto;
+	 display: flex;
+	 align-items: center;
+	 justify-content: flex-start;
+	 color: rgba(0, 0, 0, .6);
+	 font-weight: 400;
+	 font-size: 14px;
+}
+ .match-list-item .team-row {
+	 display: flex;
+	 justify-content: space-between;
+	 margin: 2px 0;
+}
+ .match-list-item .team-row .team {
+	 display: flex;
+}
+ .match-list-item .team-row .team p {
+	 margin: 0 0 0 5px;
+	 font-weight: 400;
+}
+ .match-list-item .team-row .team p strong {
+	 font-weight: 500;
+}
+ .team-search {
+	 background-color: #f5f5f5;
+	 border: 1px solid #eee;
+	 padding: 16px;
+	 border-radius: 16px;
+	 margin-top: 20px;
+}
+ .team-search .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+	 width: 100%;
+}
+ .team-search .dropdown-toggle {
+	 width: 100% !important;
+	 background-color: #fff !important;
+}
+ .team-search .dropdown-toggle .filter-option-inner-inner {
+	 display: flex;
+	 align-items: center;
+}
+ .team-search .dropdown-toggle .filter-option-inner-inner img {
+	 width: 20px;
+	 height: 20px;
+}
+ .team-search .dropdown-toggle .filter-option-inner-inner span {
+	 margin-left: 10px;
+}
+ .team-search .dropdown-item .text {
+	 display: flex;
+	 align-items: center;
+}
+ .team-search .dropdown-item .text img {
+	 width: 20px;
+	 height: 20px;
+	 border-radius: 100%;
+	 object-fit: contain;
+}
+ .team-search .dropdown-item .text span {
+	 margin-left: 6px;
+}
+ .team-search .dropdown .dropdown-menu {
+	 min-height: 300px !important;
+	 max-height: 300px !important;
+}
+ .custom-form .form-check-input {
+	 width: 16px;
+}
+ .custom-form .form-check-label {
+	 width: calc(100% - 16px);
+}
+ .custom-form .form-check-label a {
+	 font-weight: 500;
+	 color: #000;
+}
+ .teams .team {
+	 position: relative;
+}
+ .teams .team .redcard {
+	 position: absolute;
+	 right: -10px;
+	 top: 0;
+	 width: 15px;
+	 height: 20px;
+	 background-color: red;
+	 border-radius: 4px;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 color: #fff;
+}
+ .teams .score + .team .redcard {
+	 right: auto;
+	 left: -10px;
+}
+ .league-title .favourite {
+	 background-color: #fff;
+	 margin-left: 10px;
+}
+ 
